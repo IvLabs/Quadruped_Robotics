@@ -1,1 +1,1 @@
-# Quadrped_Robotics
+# Quadruped_Robotics
