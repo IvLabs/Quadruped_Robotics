@@ -3,7 +3,6 @@ from math import *
 from matplotlib import pyplot as plt
 import sys
 
-sys.path.insert(1, r'D:\Quadrped_Robotics\k_engine')
 
 from s3r_kin import kinematics
  
