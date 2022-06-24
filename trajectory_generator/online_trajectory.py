@@ -3,8 +3,9 @@ from math import *
 from matplotlib import pyplot as plt
 import sys
 
+sys.path.insert(1, r'D:\Quadrped_Robotics\trajectory_generator')
 
-from s3r_kin import kinematics
+from k_engine.s3r_kin import kinematics
  
 class trajectory_generator():
 
