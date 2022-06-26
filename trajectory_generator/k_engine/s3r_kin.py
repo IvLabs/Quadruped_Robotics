@@ -26,6 +26,9 @@ class kinematics():
     def ik(self,p,q,r):
         x, y, z = p,q,r
 
+        # Having the link l1 along x-axis would mean y=0
+        y = 0
+        
         theta_1 = m.atan2(y,x)
 
         x1 = x/m.cos(theta_1) - self.l1
