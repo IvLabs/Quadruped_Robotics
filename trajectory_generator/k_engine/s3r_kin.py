@@ -3,14 +3,25 @@
 import math as m
 
 class kinematics():
-    
+    """A class used for describing the kinematics of the leg-structure of
+    a quadruped.
+    """
     def __init__(self, link_lengths_ = [0.88,0.88,0.84]):
         self.l1, self.l2, self.l3 = link_lengths_
         
         
     # forward kinematics calculations    
     def fk(self, t1, t2, t3):
-        
+        """This method performs forward kinematics for the leg-structure.
+        Args:
+            theta_1 (float) : angle of joint_1
+            theta_2 (float) : angle of joint_2
+            theta_3 (float) : angle of joint_3
+        Returns:
+            x : x-coordinate of end-effector
+            y : y-coordinate of end-effector
+            z : z-coordinate of end-effector
+        """
         l2c2 = self.l2*m.cos(t2)
         l3c23 = self.l3*m.cos(t2+t3)
         l2s2 = self.l2*m.sin(t2) 
@@ -24,6 +35,17 @@ class kinematics():
     
     # inverse kinematics calculations
     def ik(self,p,q,r):
+        """This method performs inverse kinematics for the leg-structure.
+        Args:
+            x (float) : x-coordinate of end-effector
+            y (float) : y-coordinate of end-effector
+            z (float) : z-coordinate of end-effector
+        Returns:
+            theta_1: angle of joint_1
+            theta_2: angle of joint_2
+            theta_3: angle of joint_3
+
+        """
         x, y, z = p,q,r
 
         # Having the link l1 along x-axis would mean y=0
