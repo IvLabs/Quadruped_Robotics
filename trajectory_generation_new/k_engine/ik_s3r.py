@@ -8,7 +8,6 @@ class in_kin():
 
     def ik(self,p,q,r):
         x, y, z = p,q,r
-
         theta_1 = m.atan2(y,x)
 
         x1 = x/m.cos(theta_1) - self.l1
@@ -35,15 +34,16 @@ class in_kin():
 
     def ik2(self,p,q,r):
         x, y, z = p,q,r
-
+        x = x + self.l1
         theta_1 = m.atan2(y,x)
 
         x1 = self.l1*m.cos(theta_1)
         y1 = self.l1*m.sin(theta_1)
         z1 = 0
 
+        print(x1,y1,z1)
         r = m.sqrt((x-x1)**2 + (y-y1)**2 + (z-z1)**2)
-
+        print(r)
         theta_2 = m.acos((self.l2**2 + r**2 - self.l3**2)/(2*self.l2*r))
 
         theta_3 = m.pi - m.acos((self.l3**2 +  self.l2**2 - r**2)/(2*self.l3* self.l2))
@@ -51,3 +51,6 @@ class in_kin():
         return theta_1,theta_2,theta_3
 
 
+if __name__ == "__main__":
+    ik = in_kin()
+    print(ik.ik2(0,0,0.145))
