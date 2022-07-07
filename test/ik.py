@@ -1,4 +1,3 @@
-# from cmath import acos
 import math as m
 
 class in_kin():
@@ -24,4 +23,4 @@ class in_kin():
 
 if __name__ == "__main__":
     ik = in_kin()
-    print(ik.ik2(0.002,0,0.175))
+    
