@@ -13,9 +13,9 @@ class trajectory_generator():
  """ A class that generates the trajectory for the gait of the quadruped
  
  Attributes:
-    vx:
-    vz: 
-    vy:
+    vx: Velocity in x axis
+    vz: Velocity in z axis
+    vy: Velocity in y axis
     leg_heigh: Height of the quafruped's leg.
     f_hard: frequency 
     f_gate: f_gate 
