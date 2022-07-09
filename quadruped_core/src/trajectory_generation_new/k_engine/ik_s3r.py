@@ -6,6 +6,21 @@ class in_kin():
         self.l1, self.l2, self.l3 = link_lengths_
 
     def ik(self,p,q,r):
+        """
+        This method performs inverse kinematics for the leg-structure.
+        It takes the coordinates from the planned foor-trajectory as arguments.
+        These are fed to the inverse-kinematic model which output the 
+        joint angles for the respective joints.
+        Args:
+            p (float) : x-coordinate of end-effector
+            q (float) : y-coordinate of end-effector
+            r (float) : z-coordinate of end-effector
+        Returns:
+            theta_1: angle of joint_1
+            theta_2: angle of joint_2
+            theta_3: angle of joint_3
+
+        """
         x, y, z = p,q,r
         x = x + self.l1
         theta_1 = m.atan2(y,x)
