@@ -10,7 +10,21 @@ from mpl_toolkits import mplot3d
 from k_engine.ik_s3r import in_kin as kinematics
  
 class trajectory_generator():
-
+ """ A class that generates the trajectory for the gait of the quadruped
+ 
+ Attributes:
+    vx:
+    vz: 
+    vy:
+    leg_heigh: Height of the quafruped's leg.
+    f_hard: frequency 
+    f_gate: f_gate 
+    n: 
+    x0, y0: x[0] and y[0] trajectory cordinates
+    x1, y1: x[1] and y[1] trajectory cordinates
+    cord: trajectory coordinate (x,y,z)
+    flag: flag
+"""
 
     def __init__(self , vx , vy , vz , leg_height , f_hard, n):
         self.vx = vx
@@ -27,6 +41,11 @@ class trajectory_generator():
         self.flag = 1
 
     def get_next( self):
+    """ This method return next trajectory coordinate 
+ 
+    Returns:
+      cord: Next trajectory cordinate
+    """
         n_max=int(self.f_hard/(2*self.f_gate))
         if n_max<=self.n:
             r=int(self.n/n_max)
@@ -61,6 +80,8 @@ class trajectory_generator():
         return self.cord
 
     def swap(self):
+    """ This method swaps the x0, y0 and x1, y1. 
+    """
         self.x1 , self.y1 , self.x0 , self.y0 = self.x0 , self.y0 , self.x1 , self.y1
 
     def update_vx_vy(self):
