@@ -7,7 +7,7 @@ class in_kin():
     def ik(self,p,q,r):
         x, y, z = p,q,r
         x = x  + self.l1
-        print(x,y,z)
+        # print(x,y,z)
         theta_1 = m.atan2(y,x)
 
         x1 = self.l1*m.cos(theta_1) 
