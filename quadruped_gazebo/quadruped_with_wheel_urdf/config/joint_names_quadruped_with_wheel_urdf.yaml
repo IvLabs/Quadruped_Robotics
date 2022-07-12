@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'L1_joint_1', 'L1_joint_2', 'L1_joint_3', 'L1_wj', 'L2_joint_1', 'L2_joint_2', 'L2_joint_3', 'L2_wj', 'L3_joint_1', 'L3_joint_2', 'L3_joint_3', 'L3_wj', 'L4_joint_1', 'L4_joint_2', 'L4_joint_3', 'L4_wj', ]

@@ -1,0 +1,1187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="quadruped_with_wheel_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-4.9960036108132E-16 -3.60822483003176E-16 0.021885"
+        rpy="0 0 0" />
+      <mass
+        value="0.203637727736683" />
+      <inertia
+        ixx="0.00050808641580752"
+        ixy="5.84781279963311E-07"
+        ixz="4.06032964290264E-20"
+        iyy="0.000508086415807519"
+        iyz="5.65304757650837E-19"
+        izz="0.00101562979767441" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="L1_link_0">
+    <inertial>
+      <origin
+        xyz="0.0842147985234741 -0.0827276003031454 0.0211375094042239"
+        rpy="0 0 0" />
+      <mass
+        value="0.0446884221260727" />
+      <inertia
+        ixx="9.8801376366991E-06"
+        ixy="2.35322886110248E-06"
+        ixz="1.29212643877508E-07"
+        iyy="9.88013694575443E-06"
+        iyz="-1.29218520254399E-07"
+        izz="1.04070165248013E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L1_link_0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L1_link_0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L1_joint_0"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="L1_link_0" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="L1_link_1">
+    <inertial>
+      <origin
+        xyz="0.093321430814603 -0.0980034629565249 0.0376442783709511"
+        rpy="0 0 0" />
+      <mass
+        value="0.0143930987199218" />
+      <inertia
+        ixx="4.45017505820456E-06"
+        ixy="-2.60261208281785E-07"
+        ixz="-2.4401966701599E-11"
+        iyy="5.98109980794503E-06"
+        iyz="1.47489027357385E-10"
+        izz="4.04548154484839E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L1_link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L1_link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L1_joint_1"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="L1_link_0" />
+    <child
+      link="L1_link_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L1_link_2">
+    <inertial>
+      <origin
+        xyz="0.093789368108652 -0.0934967992379414 0.0896565727797674"
+        rpy="0 0 0" />
+      <mass
+        value="0.0530689207006715" />
+      <inertia
+        ixx="1.14960356045111E-05"
+        ixy="-5.58569884080673E-07"
+        ixz="-3.22986873062629E-07"
+        iyy="1.49593445250824E-05"
+        iyz="7.95673612749958E-07"
+        izz="9.92103584450442E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L1_link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L1_link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L1_joint_2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="L1_link_0" />
+    <child
+      link="L1_link_2" />
+    <axis
+      xyz="0.98658798358975 0.163230360645041 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L1_link_3">
+    <inertial>
+      <origin
+        xyz="0.0875786019017632 -0.0608187298823569 0.14392115606649"
+        rpy="0 0 0" />
+      <mass
+        value="0.0917448313076092" />
+      <inertia
+        ixx="2.03450169421557E-05"
+        ixy="6.38250629217032E-07"
+        ixz="2.14449571028365E-07"
+        iyy="1.4256664292793E-05"
+        iyz="-1.70059569777233E-06"
+        izz="2.36745160018717E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L1_link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L1_link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L1_joint_3"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="L1_link_0" />
+    <child
+      link="L1_link_3" />
+    <axis
+      xyz="-0.986587983589688 -0.163230360645421 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L1_w">
+    <inertial>
+      <origin
+        xyz="0.046316 -0.026471 0.15112"
+        rpy="0 0 0" />
+      <mass
+        value="0.028698" />
+      <inertia
+        ixx="2.0147E-05"
+        ixy="1.3068E-06"
+        ixz="3.3303E-11"
+        iyy="1.2465E-05"
+        iyz="5.5158E-12"
+        izz="1.2249E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L1_w.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L1_w.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L1_wj"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="L1_link_0" />
+    <child
+      link="L1_w" />
+    <axis
+      xyz="-0.98659 -0.16323 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L2_link_0">
+    <inertial>
+      <origin
+        xyz="0.0849331311319015 0.0846303971100376 0.02113751217783"
+        rpy="0 0 0" />
+      <mass
+        value="0.0446884312263056" />
+      <inertia
+        ixx="9.88013926214663E-06"
+        ixy="-2.35322862036825E-06"
+        ixz="1.29219057652482E-07"
+        iyy="9.88013956700252E-06"
+        iyz="1.29211713274424E-07"
+        izz="1.04070174089237E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L2_link_0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L2_link_0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L2_joint_0"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="L2_link_0" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="L2_link_1">
+    <inertial>
+      <origin
+        xyz="0.0955115243486912 0.0995051800566051 0.0376442783709413"
+        rpy="0 0 0" />
+      <mass
+        value="0.0143930987199294" />
+      <inertia
+        ixx="4.61668063037172E-06"
+        ixy="5.43064721952363E-07"
+        ixz="-5.3802174608623E-11"
+        iyy="5.81459423607939E-06"
+        iyz="-1.39476862502451E-10"
+        izz="4.04548154482696E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L2_link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L2_link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L2_joint_1"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="L2_link_0" />
+    <child
+      link="L2_link_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L2_link_2">
+    <inertial>
+      <origin
+        xyz="0.0944547586768158 0.10009230705946 0.0883596332593588"
+        rpy="0 0 0" />
+      <mass
+        value="0.0530690104536975" />
+      <inertia
+        ixx="1.1841384775863E-05"
+        ixy="1.04948352168858E-06"
+        ixz="-5.27712981250471E-07"
+        iyy="1.39402294989704E-05"
+        iyz="-1.85865978452832E-06"
+        izz="1.05949230376556E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L2_link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L2_link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L2_joint_2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="L2_link_0" />
+    <child
+      link="L2_link_2" />
+    <axis
+      xyz="-0.932992772505222 0.359895104791686 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L2_link_3">
+    <inertial>
+      <origin
+        xyz="0.106722409588748 0.131052242826537 0.171128264757131"
+        rpy="0 0 0" />
+      <mass
+        value="0.0917447417384381" />
+      <inertia
+        ixx="2.05985764137511E-05"
+        ixy="6.80316756782452E-07"
+        ixz="-1.5326569700641E-06"
+        iyy="2.25026614475742E-05"
+        iyz="-2.98076621003312E-06"
+        izz="1.51748405877233E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L2_link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L2_link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L2_joint_3"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="L2_link_0" />
+    <child
+      link="L2_link_3" />
+    <axis
+      xyz="0.932992772505357 -0.359895104791338 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L2_w">
+    <inertial>
+      <origin
+        xyz="0.079207 0.15726 0.20973"
+        rpy="0 0 0" />
+      <mass
+        value="0.028698" />
+      <inertia
+        ixx="1.9312E-05"
+        ixy="-2.7246E-06"
+        ixz="-6.4126E-11"
+        iyy="1.33E-05"
+        iyz="2.475E-11"
+        izz="1.2249E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L2_w.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L2_w.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L2_wj"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="L2_link_0" />
+    <child
+      link="L2_w" />
+    <axis
+      xyz="-0.93299 0.3599 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L3_link_0">
+    <inertial>
+      <origin
+        xyz="-0.0838048794418557 0.0855496151247583 0.0211375125846542"
+        rpy="0 0 0" />
+      <mass
+        value="0.0446884326781349" />
+      <inertia
+        ixx="9.88014015452117E-06"
+        ixy="2.35322879069018E-06"
+        ixz="-1.29211847759371E-07"
+        iyy="9.88013956343226E-06"
+        iyz="1.29219338015957E-07"
+        izz="1.04070178466713E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L3_link_0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L3_link_0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L3_joint_0"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="L3_link_0" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="L3_Link_1">
+    <inertial>
+      <origin
+        xyz="-0.0990977534827557 0.094548723704266 0.0376442783709476"
+        rpy="0 0 0" />
+      <mass
+        value="0.0143930987199254" />
+      <inertia
+        ixx="5.98810920129874E-06"
+        ixy="-2.38654376242194E-07"
+        ixz="1.47821395294814E-10"
+        iyy="4.44316566498858E-06"
+        iyz="-2.23003197120782E-11"
+        izz="4.04548154483821E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L3_Link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L3_Link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L3_joint_1"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="L3_link_0" />
+    <child
+      link="L3_Link_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L3_Link_2">
+    <inertial>
+      <origin
+        xyz="-0.106307816181202 0.0944256260934538 0.0834570939283674"
+        rpy="0 0 0" />
+      <mass
+        value="0.0530690139107383" />
+      <inertia
+        ixx="1.21801769637702E-05"
+        ixy="-2.56708144751841E-07"
+        ixz="2.67465672575736E-06"
+        iyy="1.14683367824613E-05"
+        iyz="-2.72390705039723E-07"
+        izz="1.27280240601991E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L3_Link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L3_Link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L3_joint_2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="L3_link_0" />
+    <child
+      link="L3_Link_2" />
+    <axis
+      xyz="-0.149171961173458 -0.988811269150824 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L3_Link_3">
+    <inertial>
+      <origin
+        xyz="-0.131618506087501 0.0988807589324233 0.155675245319753"
+        rpy="0 0 0" />
+      <mass
+        value="0.091744741481793" />
+      <inertia
+        ixx="2.33921198921277E-05"
+        ixy="-3.64567796874824E-07"
+        ixz="-2.18920197577511E-06"
+        iyy="2.04299635953128E-05"
+        iyz="7.06002935853865E-07"
+        izz="1.44539941950824E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L3_Link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L3_Link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L3_joint_3"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="L3_link_0" />
+    <child
+      link="L3_Link_3" />
+    <axis
+      xyz="0.149171961173459 0.988811269150824 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L3_w">
+    <inertial>
+      <origin
+        xyz="-0.11687 0.13232 0.19605"
+        rpy="0 0 0" />
+      <mass
+        value="0.028698" />
+      <inertia
+        ixx="1.243E-05"
+        ixy="1.1969E-06"
+        ixz="4.3725E-12"
+        iyy="2.0182E-05"
+        iyz="2.895E-11"
+        izz="1.2249E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L3_w.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L3_w.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L3_wj"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="L3_link_0" />
+    <child
+      link="L3_w" />
+    <axis
+      xyz="0.14917 0.98881 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L4_link_0">
+    <inertial>
+      <origin
+        xyz="-0.0841811881121849 -0.0839766248532849 0.021137515738177"
+        rpy="0 0 0" />
+      <mass
+        value="0.0446884431535355" />
+      <inertia
+        ixx="9.88014208201197E-06"
+        ixy="-2.35322872242226E-06"
+        ixz="-1.29218436784124E-07"
+        iyy="9.8801427300094E-06"
+        iyz="-1.29212546618245E-07"
+        izz="1.04070191640266E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L4_link_0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L4_link_0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L4_joint_0"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="L4_link_0" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="L4_link_1">
+    <inertial>
+      <origin
+        xyz="-0.0975635725685112 -0.096949375934855 0.037644278370944"
+        rpy="0 0 0" />
+      <mass
+        value="0.0143930987199267" />
+      <inertia
+        ixx="5.27847295449713E-06"
+        ixy="8.06052257091396E-07"
+        ixz="1.09729774689648E-10"
+        iyy="5.15280191184447E-06"
+        iyz="1.01527561369627E-10"
+        izz="4.04548154483439E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L4_link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L4_link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L4_joint_1"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="L4_link_0" />
+    <child
+      link="L4_link_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L4_link_2">
+    <inertial>
+      <origin
+        xyz="-0.0869456209683651 -0.0887562352614787 0.0890152455637701"
+        rpy="0 0 0" />
+      <mass
+        value="0.0530690142277069" />
+      <inertia
+        ixx="1.31259703945416E-05"
+        ixy="1.64702468995115E-06"
+        ixz="-1.24764084343388E-06"
+        iyy="1.29859148440865E-05"
+        iyz="-9.06381748824796E-07"
+        izz="1.02646529559726E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L4_link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L4_link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L4_joint_2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="L4_link_0" />
+    <child
+      link="L4_link_2" />
+    <axis
+      xyz="0.679141179767633 -0.734007668859003 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L4_link_3">
+    <inertial>
+      <origin
+        xyz="-0.0472537981032051 -0.0511735322024759 0.142096639966465"
+        rpy="0 0 0" />
+      <mass
+        value="0.0917449292594535" />
+      <inertia
+        ixx="1.67061566533814E-05"
+        ixy="-3.03142055669141E-06"
+        ixz="-1.37439586605418E-06"
+        iyy="1.79310925544751E-05"
+        iyz="-1.17655045262511E-06"
+        izz="2.36390708343823E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L4_link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L4_link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L4_joint_3"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="L4_link_0" />
+    <child
+      link="L4_link_3" />
+    <axis
+      xyz="-0.679141179767837 0.734007668858814 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L4_w">
+    <inertial>
+      <origin
+        xyz="-0.041262 0.0024162 0.14971"
+        rpy="0 0 0" />
+      <mass
+        value="0.028698" />
+      <inertia
+        ixx="1.5991E-05"
+        ixy="-4.0448E-06"
+        ixz="-7.2251E-11"
+        iyy="1.6621E-05"
+        iyz="7.8094E-11"
+        izz="1.2249E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L4_w.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_with_wheel_urdf/meshes/L4_w.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L4_wj"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="L4_link_0" />
+    <child
+      link="L4_w" />
+    <axis
+      xyz="-0.67914 0.73401 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
