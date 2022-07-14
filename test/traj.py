@@ -53,8 +53,8 @@ class trajectory_generator():
         else  :
             self.n += 1
         
-
         return self.cord[0]-self.x_shift , self.cord[1]-self.y_shift , self.cord[2] ;
+
         # return self.cord
 
     def swap(self):
