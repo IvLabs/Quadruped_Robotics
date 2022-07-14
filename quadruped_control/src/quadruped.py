@@ -12,9 +12,9 @@ class quadruped:
     def __init__(self, gate_type: str, vx, vy, vz):
 
         if gate_type == "trot":
-            phase_angs = [0, pi/2, pi/2, 0]
-        else:
             phase_angs = [0, pi, pi, 0]
+        else:
+            phase_angs = [0, pi/2, pi/2, 0]
 
         self.vx, self.vy, self.vz = vx, vy, vz
         self.f_hard = 100
