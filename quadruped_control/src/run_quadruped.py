@@ -27,9 +27,7 @@ class run_quadruped:
         point = JointTrajectoryPoint()
         for i in range(len(joint_data[0,:])):
             point= JointTrajectoryPoint(positions= joint_data[:,i], 
-              time_from_start= rospy.Duration(0.0101*i)) 
-            # print(point)
-                                                
+              time_from_start= rospy.Duration(0.0101*i))                                   
             joints_str.points.append(point)
         return joints_str
     
