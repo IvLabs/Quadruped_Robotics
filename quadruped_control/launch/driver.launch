@@ -1,0 +1,6 @@
+<launch>
+
+<include file="$(find dynamixel_workbench_controllers)/launch/dynamixel_controllers.launch"/>
+<node  name="run_quad" pkg="quadruped_control" type="run_quadruped.py" output="screen"/>
+
+</launch>
