@@ -33,8 +33,7 @@ class trajectory_generator():
         if n_max <= self.n:
             r = int(self.n/n_max)
             self.n = self.n-r*n_max
-            self.flag = -1*self.flag
-            if(self.flag == -1):
+            if(r!=0):
                 self.update_vx_vy()
             self.swap()
 
@@ -82,25 +81,3 @@ if __name__== "__main__":
     leg1 = trajectory_generator(0, 0.7, 0.1, 0.13, 50, 4, 0)
 
     leg1.anglist()
-
-        #     import matplotlib.pyplot as p
-        # plt.title("x vs z")
-        # plt.plot(x_cor, z_cor)
-        # plt.show()
-      
-        # fig, axs = plt.subplots(3, 2)
-        # axs[0, 0].plot(ang1)
-        # axs[0, 0].set_title('angle 1')
-        # axs[0, 1].plot(ang2)
-        # axs[0, 1].set_title('angle 2')
-        # axs[1, 0].plot(ang3)
-        # axs[1, 0].set_title('angle 3')
-        # axs[1, 1].plot(x_cor, z_cor)
-        # axs[1, 1].set_title('x,z')
-        # axs[2, 0].plot(z_cor)
-        # axs[2, 0].set_title('z')
-        # axs[2, 1].plot(x_cor)
-        # axs[2, 1].set_title('x')
-        # plt.show()
-
-# print( max(ang3),max(ang2))

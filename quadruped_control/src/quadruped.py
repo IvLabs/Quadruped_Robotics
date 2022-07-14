@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import numpy as np
 import sys
 import os
@@ -17,12 +18,11 @@ class quadruped:
 
         self.vx, self.vy, self.vz = vx, vy, vz
         self.f_hard = 100
+        self.f_gate=6
         self.leg_height = 0.1
         self.n_sift = self.get_n_shift(phase_angs)
         self.ang_shift = [0, 0, 0, 0]
 
-        
-        
         leg_traj = []
         for i in range(4):
             leg = trajectory_generator(vx=self.vx, vy=self.vy, vz=self.vz, leg_height=self.leg_height,
@@ -33,7 +33,7 @@ class quadruped:
     def get_n_shift(self, phase_angs):
         n_shift = [0, 0, 0, 0]
         for i in range(4):
-            n_shift[i] = int(phase_angs[i]/(2*pi*self.f_hard))
+            n_shift[i] = int(phase_angs[i]*self.f_hard/(2*pi*self.f_gate))
         return n_shift
 
     def get_loop_points(self, vx, vy):
@@ -52,4 +52,4 @@ class quadruped:
 if __name__=="__main__":
     quad = quadruped("trot", 0.04, 0, 0.04)
     loop_points = quad.get_loop_points(0.04, 0)
-    print(np.shape( np.array(loop_points)))
+    print( np.array(loop_points))
