@@ -44,7 +44,6 @@ if __name__ == "__main__":
         quad = quadruped("trot", 0.04, 0, 0.04)
         loop_points = quad.get_loop_points(0.04, 0)
         rq = run_quadruped(loop_points)
-
         rospy.spin()
     except rospy.ROSInterruptException:
         print("error")
