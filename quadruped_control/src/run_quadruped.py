@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import sys
-sys.path.insert(0,r'/home/yaswanth/catkin_ws/src/dynamixel-workbench/dynamixel_workbench_controllers/src/test')
 import rospy
 from std_msgs.msg import Float64
 from sensor_msgs.msg import JointState
@@ -44,7 +43,6 @@ if __name__ == "__main__":
         quad = quadruped("trot", 0.04, 0, 0.04)
         loop_points = quad.get_loop_points(0.04, 0)
         rq = run_quadruped(loop_points)
-
         rospy.spin()
     except rospy.ROSInterruptException:
         print("error")
