@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-import sys
-sys.path.insert(0,r'/home/yaswanth/catkin_ws/src/dynamixel-workbench/dynamixel_workbench_controllers/src/test')
+import sys, os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/../../')
 import rospy
 from std_msgs.msg import Float64
 from sensor_msgs.msg import JointState
@@ -27,9 +27,7 @@ class run_quadruped:
         point = JointTrajectoryPoint()
         for i in range(len(joint_data[0,:])):
             point= JointTrajectoryPoint(positions= joint_data[:,i], 
-              time_from_start= rospy.Duration(0.0101*i)) 
-            # print(point)
-                                                
+              time_from_start= rospy.Duration(0.0101*i))                                   
             joints_str.points.append(point)
         return joints_str
     
@@ -46,7 +44,6 @@ if __name__ == "__main__":
         quad = quadruped("trot", 0.04, 0, 0.04)
         loop_points = quad.get_loop_points(0.04, 0)
         rq = run_quadruped(loop_points)
-
         rospy.spin()
     except rospy.ROSInterruptException:
         print("error")
