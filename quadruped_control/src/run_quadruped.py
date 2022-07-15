@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-import sys
-sys.path.insert(0,r'/home/yaswanth/catkin_ws/src/dynamixel-workbench/dynamixel_workbench_controllers/src/test')
+import sys, os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/../../')
 import rospy
 from std_msgs.msg import Float64
 from sensor_msgs.msg import JointState
