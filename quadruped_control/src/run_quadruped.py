@@ -41,8 +41,8 @@ if __name__ == "__main__":
     try :
         # rospy.init_node("run_quad",anonymous=True) 
         # rospy.Rate(50)
-        quad = quadruped("trot", 0.04, 0, 0.04)
-        loop_points = quad.get_loop_points(0.04, 0)
+        quad = quadruped("trot", 0.6, 0, 0.1)
+        loop_points = quad.get_loop_points(0.6, 0)
         import numpy as np
         loop_points = np.array(loop_points)
         from matplotlib import pyplot as plt

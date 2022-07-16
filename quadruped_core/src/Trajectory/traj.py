@@ -32,15 +32,18 @@ class trajectory_generator():
         self.vx = sqrt(vx**2 + vy**2)
         self.leg_kin = kinematics()
 
+        n_max = int(self.f_hard/(2*self.f_gate))
+        if n_max <= self.n:
+            r = int(self.n/n_max)
+            self.n = self.n-r*n_max
+            if(r%2 != 0):
+                self.update_vx_vy()
+            self.swap()
+        print( n_max, self.n)
+
+
     def get_next(self):
-        # n_max = int(self.f_hard/(2*self.f_gate))
-        # if n_max <= self.n:
-        #     r = int(self.n/n_max)
-        #     self.n = self.n-r*n_max
-        #     if(r%2 != 0):
-        #         self.update_vx_vy()
-        #     self.swap()
-        # print( n_max, self.n)
+   
         time_left = ((1/(2*self.f_gate)) - (self.n/self.f_hard))
         if time_left > 0:
             self.cord[0] = self.cord[0] + \
