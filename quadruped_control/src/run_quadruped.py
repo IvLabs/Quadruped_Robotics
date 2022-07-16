@@ -39,12 +39,22 @@ class run_quadruped:
 if __name__ == "__main__":
     
     try :
-        rospy.init_node("run_quad",anonymous=True) 
-        rospy.Rate(50)
+        # rospy.init_node("run_quad",anonymous=True) 
+        # rospy.Rate(50)
         quad = quadruped("trot", 0.04, 0, 0.04)
         loop_points = quad.get_loop_points(0.04, 0)
-        rq = run_quadruped(loop_points)
-        rospy.spin()
+        import numpy as np
+        loop_points = np.array(loop_points)
+        from matplotlib import pyplot as plt
+        ang1 = loop_points[:,0]
+        ang2 = loop_points[:,1]
+        ang3 = loop_points[:,2]
+        plt.plot(ang2)
+        plt.show()
+        plt.plot(ang3)
+        plt.show()
+        # rq = run_quadruped(loop_points)
+        # rospy.spin()
     except rospy.ROSInterruptException:
         print("error")
         pass

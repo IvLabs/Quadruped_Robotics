@@ -19,7 +19,7 @@ class quadruped:
         self.vx, self.vy, self.vz = vx, vy, vz
         self.f_hard = 100
         self.f_gate=6
-        self.leg_height = 0.1
+        self.leg_height = 0.12
         self.n_sift = self.get_n_shift(phase_angs)
         self.ang_shift = [0, 0, 0, 0]
 
@@ -50,6 +50,17 @@ class quadruped:
         return loop_points  
 
 if __name__=="__main__":
-    quad = quadruped("trot", 0.04, 0, 0.04)
-    loop_points = quad.get_loop_points(0.04, 0)
+    quad = quadruped("trot", 0.6, 0, 0.04)
+    loop_points = quad.get_loop_points(0.9, 0)
     print( np.array(loop_points))
+    import numpy as np
+    loop_points = np.array(loop_points)
+    from matplotlib import pyplot as plt
+    ang1 = loop_points[:,0]
+    ang2 = loop_points[:,1]
+    ang3 = loop_points[:,2]
+    plt.plot(ang2)
+    plt.show()
+    plt.plot(ang3)
+    plt.show()
+

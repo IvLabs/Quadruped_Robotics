@@ -1,7 +1,10 @@
 #! usr/bin/env python3
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/../../..')
+# print(os.path.dirname(os.path.abspath(__file__)) + '/../../..')
 from math import *
 from matplotlib import pyplot as plt
-import sys
 from quadruped_core.src.Kinematics.ik import in_kin as kinematics
 
 
@@ -13,11 +16,11 @@ class trajectory_generator():
         self.vy = vy
         self.leg_height = leg_height
         self.f_hard = f_hard
-        self.f_gate = 6
+        self.f_gate = 4
         self.n = n
         self.x0, self.y0 = 0, 0
         self.x1 = self.x0 + self.vx/(2*self.f_gate)
-        self.x_shift = self.x1/2
+        self.x_shift = self.x1/2 
 
         self.cord = [self.x0, 0]
         self.flag = 1
@@ -28,15 +31,16 @@ class trajectory_generator():
             self.ang1_shift = ang_shift + pi/2
         self.vx = sqrt(vx**2 + vy**2)
         self.leg_kin = kinematics()
-    def get_next(self):
-        n_max = int(self.f_hard/(2*self.f_gate))
-        if n_max <= self.n:
-            r = int(self.n/n_max)
-            self.n = self.n-r*n_max
-            if(r!=0):
-                self.update_vx_vy()
-            self.swap()
 
+    def get_next(self):
+        # n_max = int(self.f_hard/(2*self.f_gate))
+        # if n_max <= self.n:
+        #     r = int(self.n/n_max)
+        #     self.n = self.n-r*n_max
+        #     if(r%2 != 0):
+        #         self.update_vx_vy()
+        #     self.swap()
+        # print( n_max, self.n)
         time_left = ((1/(2*self.f_gate)) - (self.n/self.f_hard))
         if time_left > 0:
             self.cord[0] = self.cord[0] + \
@@ -53,7 +57,6 @@ class trajectory_generator():
             self.n = 0
         else:
             self.n += 1
-
         return self.cord[0]-self.x_shift, self.cord[1]
         # return self.cord
 
@@ -61,7 +64,6 @@ class trajectory_generator():
         self.x1, self.x0 = self.x0,  self.x1
 
     def update_vx_vy(self):
-
         self.x1 = self.x0 + self.vx/(2*self.f_gate)
 
     def change_vx_vy(self,vx,vy):
@@ -78,6 +80,23 @@ class trajectory_generator():
         return self.ang1_shift, q, r
 
 if __name__== "__main__":
-    leg1 = trajectory_generator(0, 0.7, 0.1, 0.13, 50, 4, 0)
+    leg1 = trajectory_generator(0.9, 0, 0.04, 0.1, 1000, 0, 0)
 
-    leg1.anglist()
+    # x_ , z_ = [], []
+    # for i in range(100):
+    #     x, z = leg1.get_next()
+    #     x_.append(x)
+    #     z_.append(z)
+    # plt.plot(x_,z_)
+    # plt.show()
+
+    q_ , r_ = [], []
+    for i in range(1000):
+        ang1, q, r = leg1.anglist()
+        q_.append(q)
+        r_.append(r)
+    plt.plot(q_)
+    plt.show()
+    plt.plot(r_)
+    plt.show()
+
