@@ -1,0 +1,90 @@
+quadruped:
+          # Publish all joint states 
+          joint_state_controller:
+              type: joint_state_controller/JointStateController
+              publish_rate: 50  
+
+          # Position Controllers 
+          # Leg 1
+          L1j1_position_controller:
+              type: "effort_controllers/JointPositionController"
+              joint: L1_joint_1
+              pid: {p: 10.0, i: 10.0, d: 0.7}
+          
+          L1j2_position_controller:
+            type: "effort_controllers/JointPositionController"
+            joint: L1_joint_2
+            pid: {p: 10.0, i: 10.0, d: 0.7}
+
+          L1j3_position_controller:
+            type: "effort_controllers/JointPositionController"
+            joint: L1_joint_3
+            pid: {p: 10.0, i: 10.0, d: 0.7}
+          
+          L1_wj_position_controller:
+           type: "effort_controllers/JointVelocityController"
+            joint: L1_wj
+            pid: {p: 10.0, i: 10.0, d: 0.7}
+
+          #Leg 2
+          L2j1_position_controller:
+              type: "effort_controllers/JointPositionController"
+              joint: L2_joint_1
+              pid: {p: 10.0, i: 10.0, d: 0.7}
+          
+          L2j2_position_controller:
+            type: "effort_controllers/JointPositionController"
+            joint: L2_joint_2
+            pid: {p: 10.0, i: 10.0, d: 0.7}
+
+          L2j3_position_controller:
+            type: "effort_controllers/JointPositionController"
+            joint: L2_joint_3
+            pid: {p: 10.0, i: 10.0, d: 0.7}
+          L2_wj_position_controller:
+           type: "effort_controllers/JointVelocityController"
+            joint: L2_wj
+            pid: {p: 10.0, i: 10.0, d: 0.7}
+
+
+          #Leg 3
+          L3j1_position_controller:
+              type: "effort_controllers/JointPositionController"
+              joint: L3_joint_1
+              pid: {p: 10.0, i: 10.0, d: 0.7}
+          
+          L3j2_position_controller:
+            type: "effort_controllers/JointPositionController"
+            joint: L3_joint_2
+            pid: {p: 10.0, i: 10.0, d: 0.7}
+
+          L3j3_position_controller:
+            type: "effort_controllers/JointPositionController"
+            joint: L3_joint_3
+            pid: {p: 10.0, i: 10.0, d: 0.7}
+          L3_wj_position_controller:
+           type: "effort_controllers/JointVelocityController"
+            joint: L3_wj
+            pid: {p: 10.0, i: 10.0, d: 0.7}
+
+
+          #Leg 4
+          L4j1_position_controller:
+              type: "effort_controllers/JointPositionController"
+              joint: L4_joint_1
+              pid: {p: 10.0, i: 10.0, d: 0.7}
+          
+          L4j2_position_controller:
+            type: "effort_controllers/JointPositionController"
+            joint: L4_joint_2
+            pid: {p: 10.0, i: 10.0, d: 0.7}
+
+          L4j3_position_controller:
+            type: "effort_controllers/JointPositionController"
+            joint: L4_joint_3
+            pid: {p: 10.0, i: 10.0, d: 0.7}
+
+          L4_wj_position_controller:
+           type: "effort_controllers/JointVelocityController"
+            joint: L4_wj
+            pid: {p: 10.0, i: 10.0, d: 0.7}

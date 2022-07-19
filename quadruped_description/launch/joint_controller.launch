@@ -1,0 +1,29 @@
+<launch>
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/quadruped"
+        args="
+                joint_state_controller
+               
+                L1j1_position_controller
+                L1j2_position_controller
+                L1j3_position_controller
+
+                L2j1_position_controller
+                L2j2_position_controller
+                L2j3_position_controller
+
+                L3j1_position_controller
+                L3j2_position_controller
+                L3j3_position_controller
+
+                L4j1_position_controller
+                L4j2_position_controller
+                L4j3_position_controller
+             
+               
+         " >
+        </node>
+
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+            <remap from="/join_states" to="$(arg robot_name)/joint_states" />
+        </node>
+
