@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
-<robot name="quad_wheel" xmlns:xacro="http://wiki.ros.org/xacro">
- <xacro:macro name="qhumus_b">
+<robot name="quadruped" xmlns:xacro="http://wiki.ros.org/xacro">
+ <xacro:macro name="quadruped">
 
   <link
     name="base_link">
@@ -25,7 +25,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/base_link.STL" />
+          filename="package://quadruped_description/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -39,7 +39,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/base_link.STL" />
+          filename="package://quadruped_description/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -65,7 +65,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L1_link_0.STL" />
+          filename="package://quadruped_description/meshes/L1_link_0.STL" />
       </geometry>
       <material
         name="">
@@ -79,7 +79,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L1_link_0.STL" />
+          filename="package://quadruped_description/meshes/L1_link_0.STL" />
       </geometry>
     </collision>
   </link>
@@ -118,7 +118,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L1_link_1.STL" />
+          filename="package://quadruped_description/meshes/L1_link_1.STL" />
       </geometry>
       <material
         name="">
@@ -132,7 +132,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L1_link_1.STL" />
+          filename="package://quadruped_description/meshes/L1_link_1.STL" />
       </geometry>
     </collision>
   </link>
@@ -176,7 +176,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L1_link_2.STL" />
+          filename="package://quadruped_description/meshes/L1_link_2.STL" />
       </geometry>
       <material
         name="">
@@ -190,7 +190,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L1_link_2.STL" />
+          filename="package://quadruped_description/meshes/L1_link_2.STL" />
       </geometry>
     </collision>
   </link>
@@ -234,7 +234,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L1_link_3.STL" />
+          filename="package://quadruped_description/meshes/L1_link_3.STL" />
       </geometry>
       <material
         name="">
@@ -248,7 +248,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L1_link_3.STL" />
+          filename="package://quadruped_description/meshes/L1_link_3.STL" />
       </geometry>
     </collision>
   </link>
@@ -292,7 +292,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L1_w.STL" />
+          filename="package://quadruped_description/meshes/L1_w.STL" />
       </geometry>
       <material
         name="">
@@ -306,7 +306,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L1_w.STL" />
+          filename="package://quadruped_description/meshes/L1_w.STL" />
       </geometry>
     </collision>
   </link>
@@ -350,7 +350,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L2_link_0.STL" />
+          filename="package://quadruped_description/meshes/L2_link_0.STL" />
       </geometry>
       <material
         name="">
@@ -364,7 +364,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L2_link_0.STL" />
+          filename="package://quadruped_description/meshes/L2_link_0.STL" />
       </geometry>
     </collision>
   </link>
@@ -403,7 +403,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L2_link_1.STL" />
+          filename="package://quadruped_description/meshes/L2_link_1.STL" />
       </geometry>
       <material
         name="">
@@ -417,7 +417,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L2_link_1.STL" />
+          filename="package://quadruped_description/meshes/L2_link_1.STL" />
       </geometry>
     </collision>
   </link>
@@ -461,7 +461,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L2_link_2.STL" />
+          filename="package://quadruped_description/meshes/L2_link_2.STL" />
       </geometry>
       <material
         name="">
@@ -475,7 +475,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L2_link_2.STL" />
+          filename="package://quadruped_description/meshes/L2_link_2.STL" />
       </geometry>
     </collision>
   </link>
@@ -519,7 +519,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L2_link_3.STL" />
+          filename="package://quadruped_description/meshes/L2_link_3.STL" />
       </geometry>
       <material
         name="">
@@ -533,7 +533,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L2_link_3.STL" />
+          filename="package://quadruped_description/meshes/L2_link_3.STL" />
       </geometry>
     </collision>
   </link>
@@ -577,7 +577,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L2_w.STL" />
+          filename="package://quadruped_description/meshes/L2_w.STL" />
       </geometry>
       <material
         name="">
@@ -591,7 +591,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L2_w.STL" />
+          filename="package://quadruped_description/meshes/L2_w.STL" />
       </geometry>
     </collision>
   </link>
@@ -635,7 +635,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L3_link_0.STL" />
+          filename="package://quadruped_description/meshes/L3_link_0.STL" />
       </geometry>
       <material
         name="">
@@ -649,7 +649,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L3_link_0.STL" />
+          filename="package://quadruped_description/meshes/L3_link_0.STL" />
       </geometry>
     </collision>
   </link>
@@ -688,7 +688,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L3_Link_1.STL" />
+          filename="package://quadruped_description/meshes/L3_Link_1.STL" />
       </geometry>
       <material
         name="">
@@ -702,7 +702,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L3_Link_1.STL" />
+          filename="package://quadruped_description/meshes/L3_Link_1.STL" />
       </geometry>
     </collision>
   </link>
@@ -746,7 +746,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L3_Link_2.STL" />
+          filename="package://quadruped_description/meshes/L3_Link_2.STL" />
       </geometry>
       <material
         name="">
@@ -760,7 +760,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L3_Link_2.STL" />
+          filename="package://quadruped_description/meshes/L3_Link_2.STL" />
       </geometry>
     </collision>
   </link>
@@ -804,7 +804,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L3_Link_3.STL" />
+          filename="package://quadruped_description/meshes/L3_Link_3.STL" />
       </geometry>
       <material
         name="">
@@ -818,7 +818,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L3_Link_3.STL" />
+          filename="package://quadruped_description/meshes/L3_Link_3.STL" />
       </geometry>
     </collision>
   </link>
@@ -862,7 +862,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L3_w.STL" />
+          filename="package://quadruped_description/meshes/L3_w.STL" />
       </geometry>
       <material
         name="">
@@ -876,7 +876,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L3_w.STL" />
+          filename="package://quadruped_description/meshes/L3_w.STL" />
       </geometry>
     </collision>
   </link>
@@ -920,7 +920,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L4_link_0.STL" />
+          filename="package://quadruped_description/meshes/L4_link_0.STL" />
       </geometry>
       <material
         name="">
@@ -934,7 +934,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L4_link_0.STL" />
+          filename="package://quadruped_description/meshes/L4_link_0.STL" />
       </geometry>
     </collision>
   </link>
@@ -973,7 +973,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L4_link_1.STL" />
+          filename="package://quadruped_description/meshes/L4_link_1.STL" />
       </geometry>
       <material
         name="">
@@ -987,7 +987,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L4_link_1.STL" />
+          filename="package://quadruped_description/meshes/L4_link_1.STL" />
       </geometry>
     </collision>
   </link>
@@ -1031,7 +1031,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L4_link_2.STL" />
+          filename="package://quadruped_description/meshes/L4_link_2.STL" />
       </geometry>
       <material
         name="">
@@ -1045,7 +1045,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L4_link_2.STL" />
+          filename="package://quadruped_description/meshes/L4_link_2.STL" />
       </geometry>
     </collision>
   </link>
@@ -1089,7 +1089,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L4_link_3.STL" />
+          filename="package://quadruped_description/meshes/L4_link_3.STL" />
       </geometry>
       <material
         name="">
@@ -1103,7 +1103,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L4_link_3.STL" />
+          filename="package://quadruped_description/meshes/L4_link_3.STL" />
       </geometry>
     </collision>
   </link>
@@ -1147,7 +1147,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L4_w.STL" />
+          filename="package://quadruped_description/meshes/L4_w.STL" />
       </geometry>
       <material
         name="">
@@ -1161,7 +1161,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://quadruped_with_wheel_urdf/meshes/L4_w.STL" />
+          filename="package://quadruped_description/meshes/L4_w.STL" />
       </geometry>
     </collision>
   </link>

@@ -22,7 +22,7 @@ quadruped:
             pid: {p: 10.0, i: 10.0, d: 0.7}
           
           L1_wj_position_controller:
-           type: "effort_controllers/JointVelocityController"
+            type: "effort_controllers/JointVelocityController"
             joint: L1_wj
             pid: {p: 10.0, i: 10.0, d: 0.7}
 
@@ -42,7 +42,7 @@ quadruped:
             joint: L2_joint_3
             pid: {p: 10.0, i: 10.0, d: 0.7}
           L2_wj_position_controller:
-           type: "effort_controllers/JointVelocityController"
+            type: "effort_controllers/JointVelocityController"
             joint: L2_wj
             pid: {p: 10.0, i: 10.0, d: 0.7}
 
@@ -63,7 +63,7 @@ quadruped:
             joint: L3_joint_3
             pid: {p: 10.0, i: 10.0, d: 0.7}
           L3_wj_position_controller:
-           type: "effort_controllers/JointVelocityController"
+            type: "effort_controllers/JointVelocityController"
             joint: L3_wj
             pid: {p: 10.0, i: 10.0, d: 0.7}
 
@@ -85,6 +85,6 @@ quadruped:
             pid: {p: 10.0, i: 10.0, d: 0.7}
 
           L4_wj_position_controller:
-           type: "effort_controllers/JointVelocityController"
+            type: "effort_controllers/JointVelocityController"
             joint: L4_wj
             pid: {p: 10.0, i: 10.0, d: 0.7}
