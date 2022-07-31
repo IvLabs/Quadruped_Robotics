@@ -10,8 +10,7 @@
   <!-- Convert xacro and put on parameter server -->
   <param name="robot_description" command="$(find xacro)/xacro $(find quadruped_description)/xacros/quad_wheel.urdf.xacro" />
 
-
-  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model robot" />
+  <node name="spawn_model" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model robot" />
   <!-- <node
     name="spawn_model"
     pkg="gazebo_ros"
