@@ -10,17 +10,17 @@ from quadruped_core.src.Kinematics.ik import in_kin as kinematics
 
 class trajectory_generator():
 
-    def __init__(self, vx, vy, vz, leg_height, f_hard, n, ang_shift):
+    def __init__(self, vx, vy, vz, leg_height, f_hard, n, ang_shift,*args):
         self.vx = vx
         self.vz = vz
         self.vy = vy
         self.leg_height = leg_height
         self.f_hard = f_hard
-        self.f_gate = 4
+        self.f_gate = 6
         self.n = n
         self.x0, self.y0 = 0, 0
         self.x1 = self.x0 + self.vx/(2*self.f_gate)
-        self.x_shift = self.x1/2 
+        self.x_shift = self.x1/2
 
         self.cord = [self.x0, 0]
         self.flag = 1
@@ -37,9 +37,10 @@ class trajectory_generator():
             r = int(self.n/n_max)
             self.n = self.n-r*n_max
             if(r%2 != 0):
+                self.flag = self.flag * -1
+                self.cord[0]=self.vx/(2*self.f_gate)
                 self.update_vx_vy()
-            self.swap()
-        print( n_max, self.n)
+                self.swap()
 
 
     def get_next(self):
@@ -76,26 +77,26 @@ class trajectory_generator():
             self.ang1_shift = self.ang_shift + pi/2
         self.vx = sqrt(vx**2 + vy**2)
 
-    def anglist(self):
+    def anglist(self,key):
         x, z = self.get_next()
-        q, r = self.leg_kin.ik(x, z)
+        q, r = self.leg_kin.ik(x,z,key)
 
-        return self.ang1_shift, q, r
+        return self.ang1_shift, q,r
 
 if __name__== "__main__":
-    leg1 = trajectory_generator(0.9, 0, 0.04, 0.1, 1000, 0, 0)
+    leg1 = trajectory_generator(0.4, 0, 0.1, 0.11, 50, 4, 0)
 
-    # x_ , z_ = [], []
-    # for i in range(100):
-    #     x, z = leg1.get_next()
-    #     x_.append(x)
-    #     z_.append(z)
-    # plt.plot(x_,z_)
-    # plt.show()
+    x_ , z_ = [], []
+    for i in range(100):
+        x, z = leg1.get_next()
+        x_.append(x)
+        z_.append(z)
+    plt.plot(x_,z_)
+    plt.show()
 
     q_ , r_ = [], []
-    for i in range(1000):
-        ang1, q, r = leg1.anglist()
+    for i in range(100):
+        ang1, q, r = leg1.anglist(1)
         q_.append(q)
         r_.append(r)
     plt.plot(q_)

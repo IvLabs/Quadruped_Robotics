@@ -13,7 +13,7 @@ from quadruped import quadruped
 class run_quadruped:
 
     def __init__(self,loop_points ):
-        self.pub = rospy.Publisher('/dynamixel_workbench/joint_trajectory',JointTrajectory,queue_size=100)  
+        self.pub = rospy.Publisher('/dynamixel_workbench/joint_trajectory',JointTrajectory,queue_size=1000)  
         self.sub = rospy.Subscriber("/dynamixel_workbench/joint_states",JointState , self.subCallBack)
         self.loop_points = loop_points
 
@@ -39,22 +39,22 @@ class run_quadruped:
 if __name__ == "__main__":
     
     try :
-        # rospy.init_node("run_quad",anonymous=True) 
-        # rospy.Rate(50)
-        quad = quadruped("trot", 0.6, 0, 0.1)
-        loop_points = quad.get_loop_points(0.6, 0)
-        import numpy as np
-        loop_points = np.array(loop_points)
-        from matplotlib import pyplot as plt
-        ang1 = loop_points[:,0]
-        ang2 = loop_points[:,1]
-        ang3 = loop_points[:,2]
-        plt.plot(ang2)
-        plt.show()
-        plt.plot(ang3)
-        plt.show()
-        # rq = run_quadruped(loop_points)
-        # rospy.spin()
+        rospy.init_node("run_quad",anonymous=True) 
+        rate = rospy.Rate(50)
+        quad = quadruped("trot", 0.2, 0, 0.2)
+        loop_points = quad.get_loop_points(0.2, 0)
+        # import numpy as np
+        # loop_points = np.array(loop_points)
+        # from matplotlib import pyplot as plt
+        # ang1 = loop_points[:,0]
+        # ang2 = loop_points[:,1]
+        # ang3 = loop_points[:,2]
+        # plt.plot(ang2)
+        # plt.show()
+        # plt.plot(ang3)
+        # plt.show()
+        rq = run_quadruped(loop_points)
+        rospy.spin()
     except rospy.ROSInterruptException:
         print("error")
         pass
